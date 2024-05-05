@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en"
+
+<head>
+	<!-- Set metadata of the document -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>KidGliss Productions</title>
+	<!-- Link to CSS files -->
+		<link rel="stylesheet" href="format.css">
+		<link rel="stylesheet" href="layout.css">
+	 <script>
+        // JavaScript functions
+
+        // Function to keep track of the current day and time
+        function showCurrentDateTime() {
+            const now = new Date();
+            const date = now.toLocaleDateString();
+            const time = now.toLocaleTimeString();
+            alert(`Current Date: ${date}\nCurrent Time: ${time}`);
+        }
+
+        // Function using a Math method to generate a random number and alert the user
+        function useMathMethod() {
+            const number = Math.random(); // Generate a random number
+            alert(`Random Number: ${number}`);
+        }
+
+        // Function to delay a command by 3 seconds
+        function delayOrRunAtInterval() {
+            setTimeout(() => {
+                alert("This is a delayed message after 3 seconds");
+            }, 3000);
+        }
+
+        // Function to convert a number to text and alert the user
+        function convertNumberToText() {
+            const num = 12345;
+            const numAsText = num.toString();
+            alert(`Number: ${num}\nNumber as Text: ${numAsText}`);
+        }
+
+        // Countdown function
+        function countdown(seconds) {
+            let counter = seconds;
+            const interval = setInterval(() => {
+                if (counter > 0) {
+                    alert(`Countdown: ${counter}`);
+                    counter--;
+                } else {
+                    alert("Countdown Complete!");
+                    clearInterval(interval);
+                }
+            }, 1000);
+        }
+
+        // On page load, initialize countdown function
+        window.onload = function() {
+            countdown(5); // Start countdown from 5 seconds
+        };
+    </script>
+</head>
+
+<body>
+	<!-- Include navigation list with hypertext links -->
+	<header>
+	<nav>
+	<ul> 
+		<li><a href="index.html">Home</a></li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="contact.html">Contact</a></li>
+	</ul>
+	</nav>
+	</header>
+	<h1>KidGliss Productions</h1>
+	<!-- Inline images -->
+	<img src="Astronaut.jpg" alt="Brand">
+	
+</body>	
+<footer>
+	<!-- Inline audio -->
+	<audio controls autoplay>
+		<source src="astelvoidborn160bpm.mp3" type="audio/mp3">
+		Your browser does not support the audio element.
+	</audio>
+	<!-- Buttons to trigger JavaScript functions -->
+    <button onclick="showCurrentDateTime()">Show Current Date and Time</button>
+    <button onclick="useMathMethod()">Use Math Method</button>
+    <button onclick="delayOrRunAtInterval()">Delay Command</button>
+    <button onclick="convertNumberToText()">Convert Number to Text</button>
+</footer>

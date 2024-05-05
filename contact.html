@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Set metadata of the document -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Link to CSS files -->
+    <link rel="stylesheet" href="format.css">
+    <link rel="stylesheet" href="layout.css">
+</head>
+
+<body>
+    <!-- Include navigation list with hypertext links -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <h1>Contact Us</h1>
+    <p>Email: elights0@email.cpcc.edu</p>
+	<p>Phone: (734-494-0374)
+
+<!-- Form with multiple field sets and various input types -->
+    <form>
+        <fieldset>
+            <legend>Personal Information</legend>
+            
+            <!-- Text input with validation for maximum length and pattern -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" maxlength="50" required pattern="[A-Za-z\s]+" title="Only alphabets and spaces are allowed" />
+            
+            <!-- Date input -->
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required />
+            
+            <!-- Time input -->
+            <label for="time"> Time:</label>
+            <input type="time" id="time" name="time" required />
+            
+            <!-- Email input with pattern validation -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Please enter a valid email address" />
+            
+            <!-- URL input -->
+            <label for="website">Website:</label>
+            <input type="url" id="website" name="website" />
+        </fieldset>
+
+        <fieldset>
+            <legend>Preferences</legend>
+            
+            <!-- Radio buttons for gender selection -->
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="Male" required />
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="Female" />
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="Other" />
+            <label for="other">Other</label>
+            
+            <!-- Checkboxes for Inquiries -->
+            <label>Inquiries:</label>
+            <input type="checkbox" id="inquiry1" name="inquiry" value="HipHop" />
+            <label for="inquiry1">HipHop</label>
+            <input type="checkbox" id="inquiry2" name="inquiry" value="R&B" />
+            <label for="hobby2">R&B</label>
+            <input type="checkbox" id="inquiry3" name="inquiry" value="Pop" />
+            <label for="hobby3">Pop</label>
+            
+            <!-- Range slider for satisfaction level -->
+            <label for="satisfaction">Customer Satisfaction:</label>
+            <input type="range" id="satisfaction" name="satisfaction" min="1" max="10" />
+            
+            <!-- Spinner input for quantity -->
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="100" value="1" />
+        </fieldset>
+
+        <fieldset>
+            <legend>Feedback</legend>
+            
+            <!-- Text area for feedback -->
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="4" cols="50" maxlength="500" required></textarea>
+            
+            <!-- Datalist for predefined options -->
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" list="city-options" required />
+            <datalist id="city-options">
+                <option value="Atlanta">
+				<option value="Charlotte">
+				<option value="Detroit">
+				<option value="Other">
+            </datalist>
+        </fieldset>
+
+        <!-- Submit and Reset buttons -->
+        <input type="submit" value="Submit" />
+        <input type="reset" value="Reset" />
+    </form>
+	
+</body>
+
+</html>
